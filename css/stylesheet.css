@@ -1,0 +1,205 @@
+body {
+	font-family: Verdana;
+	font-size: 12px;
+	background-color: #000000;
+	margin: 0px;
+	padding: 0px;
+	background-image: url('/images/background.png');
+	background-attachment: fixed;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+header {
+	background-image: url('/images/index_r1_c1.png');
+	width: 800px;
+	height: 138px;
+	margin: 0px auto;
+	padding: 0px;
+	color: #ccc;
+}
+
+h1 {
+	display: inline;
+	position: relative;
+	left: 100px;
+	top: 25px;
+	font-size: 36px;
+	color: #fcc;
+}
+
+h1 > span {
+	display: block;
+	font-size: 14px;
+	color: #ffc;
+}
+
+h2 {
+  color: #ff6600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+h2 span {
+  font-weight: normal;
+  color: #fff;
+}
+
+header ul {
+	display: inline;
+	position: relative;
+	top: -40px;
+	left: 300px;
+}
+
+header li {
+	display: inline;
+	font-size: 16px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+a, a:visited, a:active, a:hover {
+	color: #ffa;
+	text-decoration: none;
+}
+
+#r2 {
+	margin: 0px auto;
+	padding: 0px;
+	width: 800px;
+	height: 126px;
+	background-image: url('/images/index_r2.png');
+}
+
+#r3 {
+	margin: 0px auto;
+	padding: 0px;
+	width: 800px;
+	height: 63px;
+	background-image: url('/images/index_r3_c1.png');
+}
+
+#r4 {
+	margin: 0px auto;
+	padding: 0px;
+	width: 800px;
+	min-height: 380px;
+	border-collapse: collapse;
+	border-width: 0px;
+}
+
+#r4 tr, #r4 td {
+	border-collapse: collapsed;
+	border-width: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#r4_c1 {
+	width: 17px;
+	background-image: url('/images/index_r4_c1.png');
+}
+
+#r4_c2 {
+	background: url('/images/index_r5_c2.png') no-repeat #666;
+	width: 495px;
+}
+
+#r4_c3 {
+	background: url('/images/index_r4_c5.png');
+	width: 17px;
+}
+
+#r4_c4 {
+	background: url('/images/index_r4_c6.png');
+	width: 254px;
+	color: #fff;
+}
+
+#r4_c5 {
+	background: url('/images/index_r4_c10.png');
+	width: 17px;
+}
+
+#r5 {
+	margin: 0px auto;
+	background: url('/images/index_r6_c1.png');
+	min-height: 24px;
+	width: 800px;
+}
+
+#activity_div {
+  background-image: url('images/index_r2_c1.png');
+  font-size: 10px;
+  padding: 0px;
+  margin: 0px 570px 0px 20px;
+  display: inline;
+  position: relative;
+  left: 10px;
+  width: 230px;
+}
+
+#activity_div div.element {
+  color: #ccc;
+  border-width: 1px 0px 0px 0px;
+  border-style: dotted;
+  border-color: #666666;
+  padding: 2px;
+  width: 300px;
+}
+
+#activity_div div.element span {
+  float: right;
+}
+
+footer {
+	margin: 0px auto;
+	background: url('/images/index_r9_c1.png') no-repeat;
+	width: 790px;
+	height: 42px;
+	padding: 30px 0px 0px 10px;
+	color: #ccc;
+	font-size: 10px;
+}
+
+footer span {
+	float: right;
+	font-size: 30px;
+	opacity: 0.3;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.quality0, .quality0:hover, .quality0:visisted, .quality0:active {
+	color: #ccc;
+}
+
+.quality1, .quality1:hover, .quality1:visisted, .quality1:active {
+	color: #fff;
+}
+
+.quality2, .quality2:hover, .quality2:visisted, .quality2:active {
+	color: #0f0;
+}
+
+.quality3, .quality3:hover, .quality3:visisted, .quality3:active {
+	color: #00f;
+}
+
+.quality4, .quality4:hover, .quality4:visisted, .quality4:active {
+	color: #f0f;
+}
+
+.quality5, .quality5:hover, .quality5:visisted, .quality5:active {
+	color: #fa0;
+}
+
+.quality6, .quality6:hover, .quality6:visisted, .quality6:active {
+	
+}
+
+.quality7, .quality7:hover, .quality7:visisted, .quality7:active {
+	
+}

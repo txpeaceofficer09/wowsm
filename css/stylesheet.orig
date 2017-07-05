@@ -104,27 +104,18 @@ a, a:visited, a:active, a:hover {
 
 #r4_c2 {
 	background: url('/images/index_r5_c2.png') no-repeat #fc6;
-	width: 766px;
+	width: 495px;
 }
 
-#r4_c2 table {
-	border: 1px solid black;
-	width: 100%;
-	border-collapse: collapse;
+#r4_c3 {
+	background: url('/images/index_r4_c5.png');
+	width: 17px;
+}
+
+#r4_c4 {
+	background: url('/images/index_r4_c6.png');
+	width: 254px;
 	color: #fff;
-}
-
-#r4_c2 tr, #r4_c2 td, #r4_c2 th {
-	border: 1px solid black;
-	padding: 3px;
-}
-
-#r4_c2 th {
-	background: rgba(120, 120, 255, 0.5);
-}
-
-#r4_c2 tr:nth-child(odd) {
-	background: rgba(160, 160, 160, 0.5);
 }
 
 #r4_c5 {
@@ -211,17 +202,4 @@ footer span {
 
 .quality7, .quality7:hover, .quality7:visisted, .quality7:active {
 	
-}
-
-dt {
-	display: inline-block;
-	font-weight: bold;
-	width: 10%;
-	white-space: nowrap;
-}
-
-dd {
-	display: inline-block;
-	width: 80%;
-	white-space: nowrap;
 }

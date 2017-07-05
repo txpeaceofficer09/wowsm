@@ -2,7 +2,7 @@
 
 require_once('header.php');
 
-$mysqli = new mysqli('localhost', 'root', 'trinity');
+$mysqli = new mysqli($settings['address'], $settings['username'], $settings['password']);
 
 $_GET['quality'] = isset($_GET['quality']) ? $_GET['quality'] : '3';
 $_GET['item_class'] = isset($_GET['item_class']) ? $_GET['item_class'] : '2';
@@ -16,6 +16,7 @@ $offset = ($pg * 100)-100; // Define the offset for the LIMIT clause so we can d
 $columns = array();
 $ignore_columns = array(
 	'class',
+	'Quality',
 	'subclass',
 	'AllowableClass',
 	'AllowableRace',
@@ -348,14 +349,14 @@ foreach ($item_class AS $key=>$val) {
 $side .= "</select><br />\n";
 $side .= "Item Level: <select name=\"item_level_min\">\n";
 
-$ilvls = $mysqli->query('SELECT DISTINCT itemlevel FROM `mangos2`.`item_template` ORDER BY `itemlevel` DESC;');
+$ilvls = $mysqli->query('SELECT DISTINCT itemlevel FROM `'.$settings['mangos'].'`.`item_template` ORDER BY `itemlevel` DESC;');
 while ($ilvl=$ilvls->fetch_object()->itemlevel) {
 	$side .= "<option value=\"".$ilvl."\"".($_GET['item_level_min'] == $ilvl ? ' selected' : '').">".$ilvl."</option>";
 }
 
 $side .= "</select> - <select name=\"item_level_max\">\n";
 
-$ilvls = $mysqli->query('SELECT DISTINCT itemlevel FROM `mangos2`.`item_template` ORDER BY `itemlevel` DESC;');
+$ilvls = $mysqli->query('SELECT DISTINCT itemlevel FROM `'.$settings['mangos'].'`.`item_template` ORDER BY `itemlevel` DESC;');
 while ($ilvl=$ilvls->fetch_object()->itemlevel) {
 	$side .= "<option value=\"".$ilvl."\"".($_GET['item_level_max'] == $ilvl ? ' selected' : '').">".$ilvl."</option>";
 }
@@ -378,7 +379,7 @@ $side .= "<input type=\"submit\" value=\"Search\" />\n";
 $side .= "</form>\n";
 
 $where_clause = '`quality`>='.$_GET['quality'].' and `class`='.$_GET['item_class'].' and `itemlevel`>='.$_GET['item_level_min'].' and `itemlevel`<='.$_GET['item_level_max'].' and `requiredlevel`>='.$_GET['player_level_min'].' and `requiredlevel`<='.$_GET['player_level_max'];
-$num_results = $mysqli->query('SELECT count(*) as `count` FROM `mangos2`.`item_template` where '.$where_clause.' ORDER BY `itemlevel` DESC;')->fetch_object()->count;
+$num_results = $mysqli->query('SELECT count(*) as `count` FROM `'.$settings['mangos'].'`.`item_template` where '.$where_clause.' ORDER BY `itemlevel` DESC;')->fetch_object()->count;
 
 if ($num_results >= 100) {
 	echo "\t\t<div class=\"pagination\"><b>Page:</b>\n";
@@ -398,7 +399,7 @@ echo "<table>";
 
 
 echo "<tr>";
-$headers = $mysqli->query('SHOW COLUMNS FROM `mangos2`.`item_template`;');
+$headers = $mysqli->query('SHOW COLUMNS FROM `'.$settings['mangos'].'`.`item_template`;');
 while($header=$headers->fetch_assoc()) {
 	if (!in_array($header['Field'], $ignore_columns)) {
 		echo "<th>".$header['Field']."</th>";
@@ -407,7 +408,7 @@ while($header=$headers->fetch_assoc()) {
 }
 echo "</tr>";
 
-$result = $mysqli->query('SELECT '.join(', ', $columns).' FROM `mangos2`.`item_template` where '.$where_clause.' ORDER BY `itemlevel` DESC LIMIT '.$offset.',100;');
+$result = $mysqli->query('SELECT '.join(', ', $columns).' FROM `'.$settings['mangos'].'`.`item_template` where '.$where_clause.' ORDER BY `itemlevel` DESC LIMIT '.$offset.',100;');
 
 while ($row=$result->fetch_assoc()) {
 	echo "<tr>";
@@ -449,7 +450,7 @@ while ($row=$result->fetch_assoc()) {
 				}
 				break;
 			case 'name':
-				echo "<td><a class=\"quality".$row['Quality']."\" href=\"item.php?id=".$row['entry']."\">".$row[$column]."</a></td>";
+				echo "<td><a href=\"item.php?id=".$row['entry']."\" rel=\"item=".$row['entry']."\">".$row[$column]."</a></td>";
 				break;
 			default:
 				echo "<td>".$row[$column]."</td>";	

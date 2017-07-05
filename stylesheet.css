@@ -1,0 +1,546 @@
+body {
+  font-family: Verdana;
+  font-size: 12px;
+  background-color: #000000;
+  margin: 0px;
+  padding: 0px;
+  background-image: url('images/background.png');
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: #dfcfab;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div.top-bar {
+  background-image: url('images/background2.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 4px;
+  margin: -1;
+  vertical-align: middle;
+  text-align: right;
+}
+
+div.top-bar table {
+  width: 100%;
+}
+
+img.smiley {
+  vertical-align: top;
+}
+
+h1 {
+  color: #ff6600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+h1 span {
+  font-weight: normal;
+  color: #fff;
+}
+
+#index_r2_c7 {
+  background-image: url('images/index_r2_c7.png');
+  font-size: 10px;
+}
+
+#index_r2_c7 div.header {
+  background-color: #6f5f3b;
+  border-color: #000000;
+  border-width: 1px 1px 0px 1px;
+  border-radius: 5px 5px 0px 0px;
+  color: #ffffff;
+}
+
+#index_r2_c7 ul {
+  margin: 0px;
+  padding: 3px;
+  list-style-type: none;
+  background-color: #af9f7b;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#index_r2_c7 ul li {
+  padding: 0px;
+  margin: 0px;
+}
+
+#content {
+  background-color: #666666;
+  vertical-align: top;
+  padding: 10px;
+  font-size: 12px;
+/*  color: #ffffff; */
+}
+
+/*
+#content a {
+  color: #ffefcb;
+}
+*/
+
+div.buttons {
+  text-align: right;
+}
+
+div.game-review {
+  padding: 0px;
+}
+
+div.game-review dl {
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #000000;
+  padding: 0px;
+}
+
+div.game-review dl dt {
+  padding: 4px;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #6f5f3b;
+  color: #ffffff;
+}
+
+div.game-review dl dd {
+  padding: 4px;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #af9f7b;
+  margin: 0px;
+}
+
+div.game-review a {
+  color: #3f2f0b;
+}
+
+div.forum {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.forum img {
+  vertical-align: middle;
+}
+
+div.forum dl {
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #000;
+}
+
+div.forum dl dt {
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #000;
+  background-color: #6f5f3b;
+  padding: 3px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+div.forum dl dd {
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #000;
+  margin: 0px;
+  padding: 3px 3px 3px 3px;
+  background-color: #af9f7b;
+}
+
+div.forum a {
+  color: #3f2f0b;
+}
+
+div.forums {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.forums img {
+  vertical-align: middle;
+}
+
+div.forums dl {
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #000;
+}
+
+div.forums dl dt {
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #000;
+  background-color: #6f5f3b;
+  padding: 3px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+div.forums dl dd {
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #000;
+  margin: 0px;
+  padding: 3px 3px 3px 20px;
+  background-color: #af9f7b;
+}
+
+div.forums dl dd a {
+  color: #3f2f0b;
+}
+
+div.forums dl dd dl {
+  border-width: 0px 0px 0px 1px;
+  margin: 0px;
+}
+
+div.forums dl dd dl dt {
+  border-width: 0px 0px 0px 0px;
+}
+
+div.forums dl dd dl dd {
+  border-width: 1px 0px 0px 0px;
+}
+
+div.header {
+  background-color: #6f5f3b;
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  padding: 3px;
+  margin: 0px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+div.forum-post {
+  padding: 0px;
+  margin: 0px;
+  border-width: 0px 1px 0px 1px;
+  border-style: solid;
+  border-color: #000000;
+}
+
+div.forum-post dl {
+  display: table;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: #af9f7b;
+}
+
+div.forum-post dl dt {
+  display: table-cell;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0px 1px 1px 0px;
+  vertical-align: top;
+  width: 30%;
+  padding: 4px;
+  font-size: 12px;
+}
+
+div.forum-post dl dd {
+  display: table-cell;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0px 0px 1px 0px;
+  width: 70%;
+  padding: 4px;
+}
+
+div.forum-post dl dd a {
+  color: #3f2f0b;
+}
+
+button img {
+  vertical-align: middle;
+}
+
+#index_r3_c1 {
+  background-image: url('images/index_r3_c1.png');
+  vertical-align: middle;
+  text-align: left;
+  font-size: 12px;
+  padding: 30px 17px 0px 0px;
+}
+
+#index_r3_c1 span {
+  float: right;
+}
+
+#login-box {
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #af9f7b;
+  width: 240px;
+  padding: 15px;
+}
+
+#feet {
+  float: right;
+  position: relative;
+  top: -10px;
+  left: 10px;
+}
+
+#news-block {
+  background-image: url('images/index_r2_c1.png');
+  font-size: 10px;
+  padding: 0px 0px 0px 10px;
+}
+
+#news-block div.element {
+  color: #ccc;
+  border-width: 1px 0px 0px 0px;
+  border-style: dotted;
+  border-color: #666666;
+  padding: 2px;
+}
+
+#news-block div.element span {
+  float: right;
+}
+
+div.user-list {
+  border-width: 1px 0px 0px 1px;
+  border-color: #000;
+  border-style: solid;
+  padding: 0px;
+}
+
+div.user-list dl {
+  display: table;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+div.user-list dl a {
+  color: #3f2f0b;
+}
+
+div.user-list dl dt {
+  display: table-cell;
+  border-style: solid;
+  border-color: #000;
+  border-width: 0px 1px 1px 0px;
+  width: 34%;
+  padding: 4px;
+  background-color: #af9f7b;
+}
+
+div.user-list dl dd {
+  display: table-cell;
+  border-style: solid;
+  border-color: #000;
+  border-width: 0px 1px 1px 0px;
+  width: 33%;
+  padding: 4px;
+  background-color: #af9f7b;
+}
+
+div.site-list {
+  border-width: 1px 0px 0px 1px;
+  border-color: #000;
+  border-style: solid;
+  padding: 0px;
+}
+
+div.site-list dl {
+  display: table;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+div.site-list dl a {
+  color: #3f2f0b;
+}
+
+div.site-list dl dt {
+  display: table-cell;
+  border-style: solid;
+  border-color: #000;
+  border-width: 0px 1px 1px 0px;
+  width: 80%;
+  padding: 4px;
+  background-color: #af9f7b;
+}
+
+div.site-list dl dd {
+  display: table-cell;
+  border-style: solid;
+  border-color: #000;
+  border-width: 0px 1px 1px 0px;
+  width: 10%;
+  padding: 4px;
+  background-color: #af9f7b;
+}
+
+div.game-list {
+  border-width: 1px 0px 0px 1px;
+  border-color: #000;
+  border-style: solid;
+  padding: 0px;
+}
+
+div.game-list dl {
+  display: table;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+div.game-list dl a {
+  color: #3f2f0b;
+}
+
+div.game-list dl dt {
+  display: table-cell;
+  border-style: solid;
+  border-color: #000;
+  border-width: 0px 1px 1px 0px;
+  width: 40%;
+  padding: 4px;
+  background-color: #af9f7b;
+  color: #ffffff;
+}
+
+div.game-list dl dd {
+  display: table-cell;
+  border-style: solid;
+  border-color: #000;
+  border-width: 0px 1px 1px 0px;
+  width: 20%;
+  padding: 4px;
+  background-color: #af9f7b;
+}
+
+div.form {
+/*
+  border-width: 1px 0px 0px 1px;
+  border-color: #000;
+  border-style: solid;
+  width: 50%;
+*/
+  padding: 0px;
+}
+
+div.form dl {
+  display: table;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+div.form dl dt {
+  display: table-cell;
+/*
+  border-style: solid;
+  border-color: #000;
+  border-width: 0px 1px 1px 0px;
+*/
+  vertical-align: top;
+  width: 30%;
+  padding: 4px;
+  font-weight: bold;
+}
+
+div.form dl dt ul {
+  margin: 10px 0px 0px 0px;
+  list-style-type: none;
+  padding: 0px;
+}
+
+div.form dl dt ul li {
+  font-size: 10px;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+}
+
+div.form dl dd {
+  display: table-cell;
+/*
+  border-style: solid;
+  border-color: #000;
+  border-width: 0px 1px 1px 0px;
+  text-align: right;
+*/
+  width: 70%;
+  padding: 4px;
+}
+
+#murmur {
+  background-color: #333333;
+  padding: 10px;
+  font-size: 10px;
+  vertical-align: top;
+  overflow: auto;
+  color: #ffffff;
+}
+
+#murmur ul {
+  list-style-type: none;
+/*
+  list-style-image: url('images/list-style-type.png');
+*/
+  margin: 0px;
+  padding: 0px;
+}
+
+#murmur ul li {
+  padding: 1px 0px 1px 10px;
+  margin: 0px;
+}
+
+span.right {
+  float: right;
+}
+
+#murmur ul li img {
+  vertical-align: middle;
+}
+
+div.pagination {
+  text-align: right;
+  padding: 4px;
+  margin: 10px auto;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+#footer {
+  background-image: url('images/index_r9_c1.png');
+  padding: 25px 15px 15px 10px;
+  font-size: 10px;
+  color: #af9f7b;
+  vertical-align: middle;
+}
+
+#footer a {
+  color: #af9f7b;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}

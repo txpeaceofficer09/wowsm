@@ -10,16 +10,16 @@ $ignore_columns = array(
 	'sessionkey',
 	'v',
 	's',
-	'email',
 	'joindate',
 	'last_ip',
 	'failed_logins',
-	'locked',
 	'last_login',
 	'active_realm_id',
 	'mutetime',
 	'locale',
 	'playerBot',
+	'email',
+	'locked',
 	);
 
 $expansion = array(
@@ -30,10 +30,17 @@ $expansion = array(
 	4=>'Mists of Pandaria',
 	);
 	
+$gmlevel = array(
+	0=>'Player',
+	1=>'Moderator',
+	2=>'Game Master',
+	3=>'Administrator',
+	);
+	
 $pg = isset($_GET['pg']) ? $_GET['pg'] : 1;
 $offset = ($pg * 100)-100; // Define the offset for the LIMIT clause so we can display the correct page of results.
 
-$mysqli = new mysqli('localhost', 'root', 'trinity');
+$mysqli = new mysqli($settings['address'], $settings['username'], $settings['password']);
 
 $where_clause = '1=1';
 $num_results = $mysqli->query('SELECT count(*) as `count` FROM `'.$settings['realmd'].'`.`account` where '.$where_clause.' ORDER BY `gmlevel` DESC;')->fetch_object()->count;
@@ -72,42 +79,14 @@ while ($row=$result->fetch_assoc()) {
 	
 	foreach ($columns AS $column) {
 		switch ($column) {
+			case 'username':
+				echo "<td><a href=\"account.php?id=".$row['id']."\">".$row[$column]."</a></td>";
+				break;
+			case 'gmlevel':
+				echo "<td>".$gmlevel[$row[$column]]."</td>";
+				break;
 			case 'expansion':
 				echo "<td>".$expansion[$row['expansion']]."</td>";
-				break;
-			case 'AllowableClass':
-				if (isset($races[$row[$column]])) {
-					echo "<td>".$classes[$row[$column]]."</td>";
-				} else {
-					echo "<td>".$row[$column]."</td>";
-				}
-				break;
-			case 'AllowableRace':
-				if (isset($classes[$row[$column]])) {
-					echo "<td>".$races[$row[$column]]."</td>";
-				} else {
-					echo "<td>".$row[$column]."</td>";
-				}
-				break;
-			case 'Quality':
-				if (isset($quality[$row[$column]])) {
-					echo "<td>".$quality[$row[$column]]."</td>";
-				} else {
-					echo "<td>".$row[$column]."</td>";
-				}
-				break;
-			case 'class':
-				echo "<td>".$item_class[$row[$column]]."</td>";
-				break;
-			case 'subclass':
-				if (isset($item_subclass[$row['class']]) && isset($item_subclass[$row['class']][$row[$column]])) {
-					echo "<td>".$item_subclass[$row['class']][$row[$column]]."</td>";
-				} else {
-					echo "<td>".$row[$column]."</td>";
-				}
-				break;
-			case 'name':
-				echo "<td><a href=\"http://www.wowhead.com/item=".$row['entry']."\">wowhead</a></td>";
 				break;
 			default:
 				echo "<td>".$row[$column]."</td>";	

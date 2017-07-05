@@ -48,8 +48,12 @@ foreach($file AS $line) {
 						<td><input type="text" value="<?php echo isset($settings['realmd']) ? $settings['realmd'] : ''; ?>" name="realmd" /></td>
 					</tr>
 					<tr>
-						<td>MANGOS2:</td>
-						<td><input type="text" value="<?php echo isset($settings['mangos2']) ? $settings['mangos2'] : ''; ?>" name="mangos2" /></td>
+						<td>MANGOS:</td>
+						<td><input type="text" value="<?php echo isset($settings['mangos']) ? $settings['mangos'] : ''; ?>" name="mangos2" /></td>
+					</tr>
+					<tr>
+						<td>CHARACTER:</td>
+						<td><input type="text" value="<?php echo isset($settings['character']) ? $settings['character'] : ''; ?>" name="mangos2" /></td>
 					</tr>
 					<tr>
 						<td colspan="2"><input type="Submit" value="Save Settings" /></td>
